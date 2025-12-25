@@ -571,8 +571,8 @@ new Vue({
                 </template>
             </vxe-column>
 
-            <!-- 操作 - 按钮化操作列 (显示所有行，按钮风格调整为 [ 操作 v ]) -->
-            <vxe-column title="操作" width="75" align="center" fixed="right">
+            <!-- 操作 - 按钮化操作列 (显示所有行，按钮风格调整为 [ 操作 v ]) - 禁用 overflow tooltip -->
+            <vxe-column title="操作" width="75" align="center" fixed="right" :show-overflow="false">
                 <template #default="{ row }">
                     <el-dropdown trigger="click" size="small" placement="bottom-end" @command="(cmd) => handleAction(cmd, row)">
                         <div class="cursor-pointer bg-white border border-[#dcdfe6] hover:border-[#409eff] text-[#606266] hover:text-[#409eff] rounded px-2 py-1 text-[12px] flex items-center justify-center gap-1 transition-all shadow-sm" style="min-width: 54px;">
