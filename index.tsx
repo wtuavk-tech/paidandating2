@@ -100,6 +100,7 @@ new Vue({
       displayData: [], // 当前页数据
       loading: false,
       isExpanded: false, // 搜索栏展开状态
+      isScrolling: false, // 控制跑马灯滚动
       
       // 分页
       page: {
@@ -156,6 +157,16 @@ new Vue({
   },
   created() {
     this.loadData();
+  },
+  mounted() {
+    // 设置定时器，每隔1小时滚动一次
+    setInterval(() => {
+      this.isScrolling = true;
+      // 动画持续时间为80秒，留出一点缓冲时间后重置状态
+      setTimeout(() => {
+        this.isScrolling = false;
+      }, 81000); 
+    }, 3600 * 1000); // 1小时 = 3600秒 * 1000毫秒
   },
   methods: {
     loadData() {
@@ -243,7 +254,7 @@ new Vue({
           <i class="el-icon-bell text-white font-bold"></i>
         </div>
         <div class="flex-1 overflow-hidden relative h-full flex items-center">
-          <div class="whitespace-nowrap animate-marquee flex items-center gap-16 text-[13px] font-medium text-[#333333] cursor-default">
+          <div :class="['whitespace-nowrap flex items-center gap-16 text-[13px] font-medium text-[#333333] cursor-default', isScrolling ? 'animate-scroll-once' : '']">
             <span class="flex items-center gap-2">
               <i class="el-icon-message-solid text-[#1677ff]"></i>
               <span>关于 2025 年度秋季职级晋升评审的通知：点击下方详情以阅读完整公告内容。</span>

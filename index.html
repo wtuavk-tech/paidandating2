@@ -108,16 +108,24 @@
         color: #ccc;
       }
       
-      /* 跑马灯 */
-      @keyframes marquee { 
-        0% { transform: translateX(100%); } 
-        100% { transform: translateX(-100%); } 
+      /* 跑马灯逻辑调整 */
+      /* 默认状态：transform: translateX(0); (常驻静止) */
+      
+      /* 单次滚动动画类 */
+      .animate-scroll-once {
+        animation: marquee-cycle 80s linear forwards; /* 变慢速度: 80s */
       }
-      .animate-marquee {
-        animation: marquee 35s linear infinite;
-      }
-      .group:hover .animate-marquee {
+      
+      /* 鼠标悬停暂停 */
+      .group:hover .animate-scroll-once {
         animation-play-state: paused;
+      }
+
+      @keyframes marquee-cycle {
+        0% { transform: translateX(0); }
+        45% { transform: translateX(-100%); } /* 先向左完全滚出 */
+        45.1% { transform: translateX(100%); } /* 瞬间跳到右侧 */
+        100% { transform: translateX(0); } /* 从右侧平滑滚回原位 */
       }
 
       /* 浮动动画 */
