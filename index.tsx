@@ -405,6 +405,7 @@ new Vue({
       <div class="bg-white rounded-xl shadow-sm overflow-hidden flex-1 flex flex-col relative z-0">
          <div class="flex-1 overflow-hidden relative">
             <vxe-table
+                stripe
                 border="none"
                 show-header-overflow
                 show-overflow
