@@ -307,15 +307,15 @@ new Vue({
                     <div class="flex items-center gap-3 h-[50px]"> 
                         <div class="flex items-center gap-2 text-[#333] w-[80px] justify-end shrink-0"><div class="w-1.5 h-1.5 rounded-full bg-[#ff574d]"></div><span class="text-sm font-bold">订单</span></div>
                         <div class="flex items-center gap-3 flex-1 w-full">
-                           <div class="flex flex-col items-center justify-center border border-[#eee] rounded-lg px-2 flex-1 bg-white hover:border-[#ff574d] transition-colors py-1 h-[46px]">
+                           <div class="flex flex-col items-center justify-center border border-[#a6a6a6] rounded-lg px-2 flex-1 bg-white hover:border-[#ff574d] transition-colors py-1 h-[46px]">
                               <span class="text-[11px] mb-0.5 text-[#999]">录单数</span>
                               <span class="font-sans font-bold text-[#333] text-[16px] leading-none">{{ stats.record.total }}</span>
                            </div>
-                           <div class="flex flex-col items-center justify-center border border-[#eee] rounded-lg px-2 flex-1 bg-white hover:border-[#ff574d] transition-colors py-1 h-[46px]">
+                           <div class="flex flex-col items-center justify-center border border-[#a6a6a6] rounded-lg px-2 flex-1 bg-white hover:border-[#ff574d] transition-colors py-1 h-[46px]">
                               <span class="text-[11px] mb-0.5 text-[#999]">报错数</span>
                               <span class="font-sans font-bold text-[#ff574d] text-[16px] leading-none">{{ stats.record.error }}</span>
                            </div>
-                           <div class="flex flex-col items-center justify-center border border-[#eee] rounded-lg px-2 flex-1 bg-white hover:border-[#ff574d] transition-colors py-1 h-[46px]">
+                           <div class="flex flex-col items-center justify-center border border-[#a6a6a6] rounded-lg px-2 flex-1 bg-white hover:border-[#ff574d] transition-colors py-1 h-[46px]">
                               <span class="text-[11px] mb-0.5 text-[#999]">退款额</span>
                               <span class="font-sans font-bold text-[#333] text-[16px] leading-none">{{ stats.record.refund }}</span>
                            </div>
@@ -324,7 +324,7 @@ new Vue({
                     <div class="flex items-center gap-3 h-[50px]">
                         <div class="flex items-center gap-2 text-[#333] w-[80px] justify-end shrink-0"><div class="w-1.5 h-1.5 rounded-full bg-[#1677ff]"></div><span class="text-sm font-bold">派单</span></div>
                         <div class="flex items-center gap-3 flex-1 w-full">
-                           <div class="flex flex-col items-center justify-center border border-[#eee] rounded-lg px-2 flex-1 bg-white hover:border-[#1677ff] transition-colors py-1 h-[46px]" v-for="(val, key) in stats.dispatch" :key="key">
+                           <div class="flex flex-col items-center justify-center border border-[#a6a6a6] rounded-lg px-2 flex-1 bg-white hover:border-[#1677ff] transition-colors py-1 h-[46px]" v-for="(val, key) in stats.dispatch" :key="key">
                               <span class="text-[11px] mb-0.5 text-[#999]">{{ {'today':'今日','past':'往日','other':'他派','self':'自派','single':'单库','none':'未派'}[key] }}</span>
                               <span class="font-sans font-bold text-[#333] text-[16px] leading-none">{{ val }}</span>
                            </div>
@@ -333,7 +333,7 @@ new Vue({
                     <div class="flex items-center gap-3 h-[50px]">
                         <div class="flex items-center gap-2 text-[#333] w-[80px] justify-end shrink-0"><div class="w-1.5 h-1.5 rounded-full bg-[#00b578]"></div><span class="text-sm font-bold">业绩</span></div>
                         <div class="flex items-center gap-3 flex-1 w-full">
-                           <div class="flex flex-col items-center justify-center border border-[#eee] rounded-lg px-2 flex-1 bg-white hover:border-[#00b578] transition-colors py-1 h-[46px]" v-for="(val, key) in stats.perf" :key="key">
+                           <div class="flex flex-col items-center justify-center border border-[#a6a6a6] rounded-lg px-2 flex-1 bg-white hover:border-[#00b578] transition-colors py-1 h-[46px]" v-for="(val, key) in stats.perf" :key="key">
                               <span class="text-[11px] mb-0.5 text-[#999]">{{ {'rate':'收款率','today':'今日','wechat':'微信','platform':'平台','offline':'线下'}[key] }}</span>
                               <span :class="['font-sans font-bold text-[16px] leading-none', key === 'today' ? 'text-[#00b578]' : 'text-[#333]']">{{ val }}</span>
                            </div>
