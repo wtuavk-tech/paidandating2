@@ -285,57 +285,57 @@ new Vue({
                     <div class="w-9 h-9 rounded-full bg-[#1677ff] flex items-center justify-center text-white shadow-sm shadow-blue-200">
                         <i class="el-icon-s-data text-lg"></i>
                     </div>
-                    <span class="text-[15px] font-bold text-[#333333]">数据概览</span>
+                    <span class="text-[14px] font-bold text-[#333333]">数据概览</span>
                 </div>
                 <div class="flex items-center flex-1 justify-between gap-6 overflow-hidden h-full">
-                    <div class="flex items-baseline gap-1.5"><span class="text-xs text-[#999999]">录单</span><span class="text-xl font-bold text-[#1677ff] font-sans">{{ stats.record.total }}</span></div>
-                    <div class="flex items-baseline gap-1.5"><span class="text-xs text-[#999999]">今日派单</span><span class="text-xl font-bold text-[#333333] font-sans">{{ stats.dispatch.today }}</span></div>
-                    <div class="flex items-baseline gap-1.5"><span class="text-xs text-[#999999]">今日业绩</span><span class="text-xl font-bold text-[#00b578] font-sans">{{ stats.perf.today }}</span></div>
-                    <div class="flex items-baseline gap-1.5"><span class="text-xs text-[#999999]">收款率</span><span class="text-xl font-bold text-[#333333] font-sans">{{ stats.perf.rate }}</span></div>
-                    <div class="flex items-baseline gap-1.5"><span class="text-xs text-[#999999]">退款</span><span class="text-xl font-bold text-[#ff574d] font-sans">{{ stats.record.refund }}</span></div>
+                    <div class="flex items-baseline gap-1.5"><span class="text-[12px] text-[#666666]">录单</span><span class="text-[20px] font-bold text-[#1677ff] font-sans">{{ stats.record.total }}</span></div>
+                    <div class="flex items-baseline gap-1.5"><span class="text-[12px] text-[#666666]">今日派单</span><span class="text-[20px] font-bold text-[#333333] font-sans">{{ stats.dispatch.today }}</span></div>
+                    <div class="flex items-baseline gap-1.5"><span class="text-[12px] text-[#666666]">今日业绩</span><span class="text-[20px] font-bold text-[#00b578] font-sans">{{ stats.perf.today }}</span></div>
+                    <div class="flex items-baseline gap-1.5"><span class="text-[12px] text-[#666666]">收款率</span><span class="text-[20px] font-bold text-[#333333] font-sans">{{ stats.perf.rate }}</span></div>
+                    <div class="flex items-baseline gap-1.5"><span class="text-[12px] text-[#666666]">退款</span><span class="text-[20px] font-bold text-[#ff574d] font-sans">{{ stats.record.refund }}</span></div>
                 </div>
              </div>
              <!-- Expanded State -->
              <div v-else class="flex h-full w-full">
                 <div class="w-[30px] flex flex-col justify-center shrink-0 border-r border-[#f0f0f0] mr-2 py-4 items-center">
-                    <div class="flex flex-col items-center text-sm font-bold text-[#1677ff] leading-relaxed">
+                    <div class="flex flex-col items-center text-[14px] font-bold text-[#333333] leading-relaxed">
                         <span>数</span><span>据</span>
                     </div>
                 </div>
                 <div class="flex-1 flex flex-col justify-center space-y-2 pt-0"> 
                     <!-- Rows (using Alipay accent colors) -->
                     <div class="flex items-center gap-3 h-[50px]"> 
-                        <div class="flex items-center gap-2 text-[#333] w-[80px] justify-end shrink-0"><div class="w-1.5 h-1.5 rounded-full bg-[#ff574d]"></div><span class="text-sm font-bold">订单</span></div>
+                        <div class="flex items-center gap-2 text-[#333] w-[80px] justify-end shrink-0"><div class="w-1.5 h-1.5 rounded-full bg-[#ff574d]"></div><span class="text-[14px] font-bold text-[#333333]">订单</span></div>
                         <div class="flex items-center gap-3 flex-1 w-full">
                            <div class="flex flex-col items-center justify-center border border-[#a6a6a6] rounded-lg px-2 flex-1 bg-white hover:border-[#ff574d] transition-colors py-1 h-[46px]">
-                              <span class="text-[11px] mb-0.5 text-[#999]">录单数</span>
-                              <span class="font-sans font-bold text-[#333] text-[16px] leading-none">{{ stats.record.total }}</span>
+                              <span class="text-[12px] mb-0.5 text-[#666666]">录单数</span>
+                              <span class="font-sans font-bold text-[#333] text-[20px] leading-none">{{ stats.record.total }}</span>
                            </div>
                            <div class="flex flex-col items-center justify-center border border-[#a6a6a6] rounded-lg px-2 flex-1 bg-white hover:border-[#ff574d] transition-colors py-1 h-[46px]">
-                              <span class="text-[11px] mb-0.5 text-[#999]">报错数</span>
-                              <span class="font-sans font-bold text-[#ff574d] text-[16px] leading-none">{{ stats.record.error }}</span>
+                              <span class="text-[12px] mb-0.5 text-[#666666]">报错数</span>
+                              <span class="font-sans font-bold text-[#ff574d] text-[20px] leading-none">{{ stats.record.error }}</span>
                            </div>
                            <div class="flex flex-col items-center justify-center border border-[#a6a6a6] rounded-lg px-2 flex-1 bg-white hover:border-[#ff574d] transition-colors py-1 h-[46px]">
-                              <span class="text-[11px] mb-0.5 text-[#999]">退款额</span>
-                              <span class="font-sans font-bold text-[#333] text-[16px] leading-none">{{ stats.record.refund }}</span>
+                              <span class="text-[12px] mb-0.5 text-[#666666]">退款额</span>
+                              <span class="font-sans font-bold text-[#333] text-[20px] leading-none">{{ stats.record.refund }}</span>
                            </div>
                         </div>
                     </div>
                     <div class="flex items-center gap-3 h-[50px]">
-                        <div class="flex items-center gap-2 text-[#333] w-[80px] justify-end shrink-0"><div class="w-1.5 h-1.5 rounded-full bg-[#1677ff]"></div><span class="text-sm font-bold">派单</span></div>
+                        <div class="flex items-center gap-2 text-[#333] w-[80px] justify-end shrink-0"><div class="w-1.5 h-1.5 rounded-full bg-[#1677ff]"></div><span class="text-[14px] font-bold text-[#333333]">派单</span></div>
                         <div class="flex items-center gap-3 flex-1 w-full">
                            <div class="flex flex-col items-center justify-center border border-[#a6a6a6] rounded-lg px-2 flex-1 bg-white hover:border-[#1677ff] transition-colors py-1 h-[46px]" v-for="(val, key) in stats.dispatch" :key="key">
-                              <span class="text-[11px] mb-0.5 text-[#999]">{{ {'today':'今日','past':'往日','other':'他派','self':'自派','single':'单库','none':'未派'}[key] }}</span>
-                              <span class="font-sans font-bold text-[#333] text-[16px] leading-none">{{ val }}</span>
+                              <span class="text-[12px] mb-0.5 text-[#666666]">{{ {'today':'今日','past':'往日','other':'他派','self':'自派','single':'单库','none':'未派'}[key] }}</span>
+                              <span class="font-sans font-bold text-[#333] text-[20px] leading-none">{{ val }}</span>
                            </div>
                         </div>
                     </div>
                     <div class="flex items-center gap-3 h-[50px]">
-                        <div class="flex items-center gap-2 text-[#333] w-[80px] justify-end shrink-0"><div class="w-1.5 h-1.5 rounded-full bg-[#00b578]"></div><span class="text-sm font-bold">业绩</span></div>
+                        <div class="flex items-center gap-2 text-[#333] w-[80px] justify-end shrink-0"><div class="w-1.5 h-1.5 rounded-full bg-[#00b578]"></div><span class="text-[14px] font-bold text-[#333333]">业绩</span></div>
                         <div class="flex items-center gap-3 flex-1 w-full">
                            <div class="flex flex-col items-center justify-center border border-[#a6a6a6] rounded-lg px-2 flex-1 bg-white hover:border-[#00b578] transition-colors py-1 h-[46px]" v-for="(val, key) in stats.perf" :key="key">
-                              <span class="text-[11px] mb-0.5 text-[#999]">{{ {'rate':'收款率','today':'今日','wechat':'微信','platform':'平台','offline':'线下'}[key] }}</span>
-                              <span :class="['font-sans font-bold text-[16px] leading-none', key === 'today' ? 'text-[#00b578]' : 'text-[#333]']">{{ val }}</span>
+                              <span class="text-[12px] mb-0.5 text-[#666666]">{{ {'rate':'收款率','today':'今日','wechat':'微信','platform':'平台','offline':'线下'}[key] }}</span>
+                              <span :class="['font-sans font-bold text-[20px] leading-none', key === 'today' ? 'text-[#00b578]' : 'text-[#333]']">{{ val }}</span>
                            </div>
                         </div>
                     </div>
