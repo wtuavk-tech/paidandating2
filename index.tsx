@@ -276,9 +276,9 @@ new Vue({
 
       <!-- 2. Search Panel (搜索面板) -->
       <div class="shadow-sm mb-3 transition-all duration-300 ease-in-out relative overflow-hidden rounded-xl bg-white shrink-0">
-        <div class="flex w-full transition-all duration-300" :style="{ height: isExpanded ? '210px' : '64px' }">
-          <!-- Left Content -->
-          <div :class="['transition-all duration-300 ease-in-out border-r border-[#f0f0f0] flex relative', isExpanded ? 'w-[66%] p-2' : 'w-[90%] px-4 py-2 flex-row items-center gap-6']">
+        <div class="flex w-full transition-all duration-300" :style="{ height: isExpanded ? '210px' : '44px' }">
+          <!-- Left Content (Data Overview) - Reduced width to 61% -->
+          <div :class="['transition-all duration-300 ease-in-out border-r border-[#f0f0f0] flex relative', isExpanded ? 'w-[61%] p-2' : 'w-[90%] px-4 py-1 flex-row items-center gap-6']">
              <!-- Collapsed State -->
              <div v-if="!isExpanded" class="flex items-center w-full h-full">
                 <div class="flex items-center gap-3 shrink-0 mr-6">
@@ -297,43 +297,43 @@ new Vue({
              </div>
              <!-- Expanded State -->
              <div v-else class="flex h-full w-full">
-                <div class="w-[30px] flex flex-col justify-center shrink-0 border-r border-[#f0f0f0] mr-2 py-4 items-center">
-                    <div class="flex flex-col items-center text-[14px] font-bold text-[#333333] leading-relaxed">
+                <div class="w-[20px] flex flex-col justify-center shrink-0 border-r border-[#f0f0f0] mr-1 py-4 items-center">
+                    <div class="flex flex-col items-center text-[13px] font-bold text-[#333333] leading-relaxed">
                         <span>数</span><span>据</span>
                     </div>
                 </div>
                 <div class="flex-1 flex flex-col justify-center space-y-2 pt-0"> 
-                    <!-- Rows (using Alipay accent colors) -->
-                    <div class="flex items-center gap-3 h-[50px]"> 
+                    <!-- Rows (using Alipay accent colors) - 44px Height -->
+                    <div class="flex items-center gap-3 h-[44px]"> 
                         <div class="flex items-center gap-2 text-[#333] w-[80px] justify-end shrink-0"><div class="w-1.5 h-1.5 rounded-full bg-[#ff574d]"></div><span class="text-[14px] font-bold text-[#333333]">订单</span></div>
                         <div class="flex items-center gap-3 flex-1 w-full">
-                           <div class="flex flex-col items-center justify-center border border-[#a6a6a6] rounded-lg px-2 flex-1 bg-white hover:border-[#ff574d] transition-colors py-1 h-[46px]">
+                           <div class="flex flex-col items-center justify-center border border-[#a6a6a6] rounded-lg px-2 flex-1 bg-white hover:border-[#ff574d] transition-colors py-1 h-[44px]">
                               <span class="text-[12px] mb-0.5 text-[#666666]">录单数</span>
                               <span class="font-sans font-bold text-[#333] text-[20px] leading-none">{{ stats.record.total }}</span>
                            </div>
-                           <div class="flex flex-col items-center justify-center border border-[#a6a6a6] rounded-lg px-2 flex-1 bg-white hover:border-[#ff574d] transition-colors py-1 h-[46px]">
+                           <div class="flex flex-col items-center justify-center border border-[#a6a6a6] rounded-lg px-2 flex-1 bg-white hover:border-[#ff574d] transition-colors py-1 h-[44px]">
                               <span class="text-[12px] mb-0.5 text-[#666666]">报错数</span>
                               <span class="font-sans font-bold text-[#ff574d] text-[20px] leading-none">{{ stats.record.error }}</span>
                            </div>
-                           <div class="flex flex-col items-center justify-center border border-[#a6a6a6] rounded-lg px-2 flex-1 bg-white hover:border-[#ff574d] transition-colors py-1 h-[46px]">
+                           <div class="flex flex-col items-center justify-center border border-[#a6a6a6] rounded-lg px-2 flex-1 bg-white hover:border-[#ff574d] transition-colors py-1 h-[44px]">
                               <span class="text-[12px] mb-0.5 text-[#666666]">退款额</span>
                               <span class="font-sans font-bold text-[#333] text-[20px] leading-none">{{ stats.record.refund }}</span>
                            </div>
                         </div>
                     </div>
-                    <div class="flex items-center gap-3 h-[50px]">
+                    <div class="flex items-center gap-3 h-[44px]">
                         <div class="flex items-center gap-2 text-[#333] w-[80px] justify-end shrink-0"><div class="w-1.5 h-1.5 rounded-full bg-[#1677ff]"></div><span class="text-[14px] font-bold text-[#333333]">派单</span></div>
                         <div class="flex items-center gap-3 flex-1 w-full">
-                           <div class="flex flex-col items-center justify-center border border-[#a6a6a6] rounded-lg px-2 flex-1 bg-white hover:border-[#1677ff] transition-colors py-1 h-[46px]" v-for="(val, key) in stats.dispatch" :key="key">
+                           <div class="flex flex-col items-center justify-center border border-[#a6a6a6] rounded-lg px-2 flex-1 bg-white hover:border-[#1677ff] transition-colors py-1 h-[44px]" v-for="(val, key) in stats.dispatch" :key="key">
                               <span class="text-[12px] mb-0.5 text-[#666666]">{{ {'today':'今日','past':'往日','other':'他派','self':'自派','single':'单库','none':'未派'}[key] }}</span>
                               <span class="font-sans font-bold text-[#333] text-[20px] leading-none">{{ val }}</span>
                            </div>
                         </div>
                     </div>
-                    <div class="flex items-center gap-3 h-[50px]">
+                    <div class="flex items-center gap-3 h-[44px]">
                         <div class="flex items-center gap-2 text-[#333] w-[80px] justify-end shrink-0"><div class="w-1.5 h-1.5 rounded-full bg-[#00b578]"></div><span class="text-[14px] font-bold text-[#333333]">业绩</span></div>
                         <div class="flex items-center gap-3 flex-1 w-full">
-                           <div class="flex flex-col items-center justify-center border border-[#a6a6a6] rounded-lg px-2 flex-1 bg-white hover:border-[#00b578] transition-colors py-1 h-[46px]" v-for="(val, key) in stats.perf" :key="key">
+                           <div class="flex flex-col items-center justify-center border border-[#a6a6a6] rounded-lg px-2 flex-1 bg-white hover:border-[#00b578] transition-colors py-1 h-[44px]" v-for="(val, key) in stats.perf" :key="key">
                               <span class="text-[12px] mb-0.5 text-[#666666]">{{ {'rate':'收款率','today':'今日','wechat':'微信','platform':'平台','offline':'线下'}[key] }}</span>
                               <span :class="['font-sans font-bold text-[20px] leading-none', key === 'today' ? 'text-[#00b578]' : 'text-[#333]']">{{ val }}</span>
                            </div>
@@ -342,34 +342,38 @@ new Vue({
                 </div>
              </div>
           </div>
-          <!-- Right Action/Search -->
+          <!-- Right Action/Search - Increased width to 39% -->
           <div 
-            :class="['transition-all duration-300 ease-in-out relative', isExpanded ? 'w-[34%] p-3 bg-white' : 'w-[10%] hover:bg-gray-50 cursor-pointer flex items-center justify-center']"
+            :class="['transition-all duration-300 ease-in-out relative', isExpanded ? 'w-[39%] p-3 bg-white' : 'w-[10%] hover:bg-gray-50 cursor-pointer flex items-center justify-center']"
             @click="!isExpanded && toggleExpand()"
           >
-             <div v-if="!isExpanded" class="flex flex-col items-center justify-center gap-1 text-[#1677ff] w-full h-full">
-                 <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mb-1">
-                    <i class="el-icon-search text-lg"></i>
+             <div v-if="!isExpanded" class="flex flex-row items-center justify-center gap-2 text-[#1677ff] w-full h-full">
+                 <div class="w-7 h-7 rounded-full bg-blue-50 flex items-center justify-center">
+                    <i class="el-icon-search text-base"></i>
                  </div>
-                 <span class="text-[10px] font-bold text-[#666]">高级筛选</span>
+                 <span class="text-[12px] font-bold text-[#666]">高级筛选</span>
              </div>
-             <div v-else class="h-full flex flex-col justify-between">
-                 <div class="flex justify-between items-center mb-1">
+             <!-- Expanded Search Form - Centered Layout -->
+             <div v-else class="h-full relative flex flex-col justify-center">
+                 <!-- Header - Absolute positioned to not affect row alignment -->
+                 <div class="absolute top-0 left-0 w-full flex justify-between items-center z-10">
                     <div class="flex items-center gap-2"><i class="el-icon-search text-[#1677ff]"></i><h3 class="text-sm font-bold text-[#333]">筛选</h3></div>
                     <button @click.stop="toggleExpand" class="text-[10px] text-[#999] hover:text-[#1677ff] flex items-center gap-1 hover:bg-blue-50 px-2 py-1 rounded transition-all">收起 <i class="el-icon-arrow-up"></i></button>
                  </div>
-                 <div class="space-y-2 flex-1">
-                    <div class="flex gap-2 h-[34px]">
+                 
+                 <!-- Filter Rows - 44px Height to match left side -->
+                 <div class="space-y-2 w-full">
+                    <div class="flex gap-2 h-[44px]">
                         <div class="flex-[1.2] flex items-center gap-1 bg-white border border-[#d9d9d9] p-1 rounded hover:border-[#1677ff] transition-colors min-w-0">
                              <div class="text-[#999] px-1 shrink-0"><i class="el-icon-user"></i></div>
-                             <el-select v-model="searchForm.personType" size="mini" class="w-[70px]" :popper-append-to-body="false">
+                             <el-select v-model="searchForm.personType" size="mini" class="w-[85px]" :popper-append-to-body="false">
                                 <el-option label="综合" value="order"></el-option>
                                 <el-option label="师傅" value="master"></el-option>
                              </el-select>
                              <input v-model="searchForm.keyword" type="text" class="bg-transparent text-[13px] text-[#333] outline-none w-full h-full px-1 placeholder-[#ccc] border-l border-[#f0f0f0]" placeholder="关键字" />
                         </div>
                         <div class="flex-1 flex items-center gap-1 bg-white border border-[#d9d9d9] p-1 rounded hover:border-[#1677ff] transition-colors min-w-0">
-                            <el-select v-model="searchForm.otherType" size="mini" class="w-[75px]" :popper-append-to-body="false">
+                            <el-select v-model="searchForm.otherType" size="mini" class="w-[85px]" :popper-append-to-body="false">
                                 <el-option label="状态" value="status"></el-option>
                                 <el-option label="项目" value="service"></el-option>
                             </el-select>
@@ -383,15 +387,16 @@ new Vue({
                             </div>
                         </div>
                     </div>
-                    <div class="flex items-center gap-2 bg-white border border-[#d9d9d9] p-1 rounded hover:border-[#1677ff] transition-colors h-[34px]">
+                    <div class="flex items-center gap-2 bg-white border border-[#d9d9d9] p-1 rounded hover:border-[#1677ff] transition-colors h-[44px]">
                         <div class="text-[#999] px-1"><i class="el-icon-date"></i></div>
-                        <el-select v-model="searchForm.timeType" size="mini" class="w-[90px]" :popper-append-to-body="false">
+                        <el-select v-model="searchForm.timeType" size="mini" class="w-[110px]" :popper-append-to-body="false">
                             <el-option label="创建时间" value="create"></el-option>
                             <el-option label="完成时间" value="finish"></el-option>
+                            <el-option label="收款时间" value="payment"></el-option>
                         </el-select>
                         <el-date-picker v-model="searchForm.dateRange" type="datetimerange" range-separator="-" start-placeholder="开始" end-placeholder="结束" size="mini" class="flex-1 !w-full !border-0" prefix-icon="el-icon-time" :clearable="false"></el-date-picker>
                     </div>
-                    <div class="flex items-center justify-between gap-3 h-[34px]">
+                    <div class="flex items-center justify-between gap-3 h-[44px]">
                         <button class="h-full flex-1 bg-white text-[#666] hover:text-[#1677ff] text-[12px] rounded border border-[#d9d9d9] hover:border-[#1677ff] transition-colors">重置</button>
                         <button class="h-full flex-[2] bg-[#1677ff] hover:bg-[#4096ff] text-white text-[12px] rounded transition-all font-bold shadow-sm flex items-center gap-2 justify-center"><i class="el-icon-search"></i> 查询</button>
                     </div>
